@@ -1,8 +1,8 @@
-name="Technology Ascendant"
+version="3.1.*"
 tags={
 	"Technologies"
 	"Gameplay"
 }
-version="2.5.*"
-supported_version="2.6.*"
+name="Technology Ascendant"
+supported_version="3.1.*"
 remote_file_id="1455861246"

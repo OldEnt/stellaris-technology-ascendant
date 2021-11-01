@@ -376,7 +376,7 @@ planet_event = {
                 has_country_flag = the_foundation
             }
         }
-        name = move_foundation
+        name = Move_foundation
         owner = {
 			add_monthly_resource_mult = {
 				resource = unity

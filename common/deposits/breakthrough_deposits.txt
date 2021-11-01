@@ -1,5 +1,5 @@
 d_the_foundation = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	should_swap_deposit_on_terraforming = no
 	
@@ -15,7 +15,7 @@ d_the_foundation = {
 }
 
 d_the_foundation_gestalt = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	should_swap_deposit_on_terraforming = no
 	

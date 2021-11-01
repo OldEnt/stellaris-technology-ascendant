@@ -849,23 +849,23 @@ country_event = {
 		}		
 	}
 	immediate = {
-		add_event_chain_counter = { event_chain = breakthrough_materials counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_industry counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_rocketry counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_particles counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_voidcraft counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_field_manipulation counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_computing counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_psionics counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_new_worlds counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_biology counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_statecraft counter = other_breakthroughs amount = 1 }
-		add_event_chain_counter = { event_chain = breakthrough_military_theory counter = other_breakthroughs amount = 1 }
+		if = { limit = { has_event_chain = breakthrough_materials } add_event_chain_counter = { event_chain = breakthrough_materials counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_industry } add_event_chain_counter = { event_chain = breakthrough_industry counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_rocketry } add_event_chain_counter = { event_chain = breakthrough_rocketry counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_particles } add_event_chain_counter = { event_chain = breakthrough_particles counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_voidcraft } add_event_chain_counter = { event_chain = breakthrough_voidcraft counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_field_manipulation } add_event_chain_counter = { event_chain = breakthrough_field_manipulation counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_computing } add_event_chain_counter = { event_chain = breakthrough_computing counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_psionics } add_event_chain_counter = { event_chain = breakthrough_psionics counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_new_worlds } add_event_chain_counter = { event_chain = breakthrough_new_worlds counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_biology } add_event_chain_counter = { event_chain = breakthrough_biology counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_statecraft } add_event_chain_counter = { event_chain = breakthrough_statecraft counter = other_breakthroughs amount = 1 } }
+		if = { limit = { has_event_chain = breakthrough_military_theory } add_event_chain_counter = { event_chain = breakthrough_military_theory counter = other_breakthroughs amount = 1 } }
 		if = {
 			limit = {
 				last_increased_tech = tech_materials_breakthrough
 			}
-			end_event_chain = breakthrough_materials
+			if = { limit = { has_event_chain = breakthrough_materials } end_event_chain = breakthrough_materials }
 			set_country_flag = "materials_known"
 			every_playable_country = {
 				limit = {
@@ -889,7 +889,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_industry_breakthrough
 			}
-			end_event_chain = breakthrough_industry
+			if = { limit = { has_event_chain = breakthrough_industry } end_event_chain = breakthrough_industry }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -900,19 +900,19 @@ country_event = {
 			if = {
                 limit = {
                     NOT = { 
-                        has_global_flag = "discovery_discovered"
+                        has_global_flag = "industry_discovered"
                     }
                 }
-                set_global_flag = "discovery_discovered"
-                save_global_event_target_as = "discovery_first"
+                set_global_flag = "industry_discovered"
+                save_global_event_target_as = "industry_first"
             }
-            set_country_flag = "discovery_breakthrough"
+            set_country_flag = "industry_breakthrough"
 		}
 		if = {
 			limit = {
 				last_increased_tech = tech_rocketry_breakthrough
 			}
-			end_event_chain = breakthrough_rocketry
+			if = { limit = { has_event_chain = breakthrough_rocketry } end_event_chain = breakthrough_rocketry }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -935,7 +935,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_particles_breakthrough
 			}
-			end_event_chain = breakthrough_particles
+			if = { limit = { has_event_chain = breakthrough_particles } end_event_chain = breakthrough_particles }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -958,7 +958,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_voidcraft_breakthrough
 			}
-			end_event_chain = breakthrough_voidcraft
+			if = { limit = { has_event_chain = breakthrough_voidcraft } end_event_chain = breakthrough_voidcraft }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -981,7 +981,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_field_manipulation_breakthrough
 			}
-			end_event_chain = breakthrough_field_manipulation
+			if = { limit = { has_event_chain = breakthrough_field_manipulation } end_event_chain = breakthrough_field_manipulation }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -1004,7 +1004,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_computing_breakthrough
 			}
-			end_event_chain = breakthrough_computing
+			if = { limit = { has_event_chain = breakthrough_computing } end_event_chain = breakthrough_computing }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -1027,7 +1027,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_psionics_breakthrough
 			}
-			end_event_chain = breakthrough_psionics
+			if = { limit = { has_event_chain = breakthrough_psionics } end_event_chain = breakthrough_psionics }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -1050,7 +1050,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_new_worlds_breakthrough
 			}
-			end_event_chain = breakthrough_new_worlds
+			if = { limit = { has_event_chain = breakthrough_new_worlds } end_event_chain = breakthrough_new_worlds }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -1073,7 +1073,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_biology_breakthrough
 			}
-			end_event_chain = breakthrough_biology
+			if = { limit = { has_event_chain = breakthrough_biology } end_event_chain = breakthrough_biology }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -1096,7 +1096,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_statecraft_breakthrough
 			}
-			end_event_chain = breakthrough_statecraft
+			if = { limit = { has_event_chain = breakthrough_statecraft } end_event_chain = breakthrough_statecraft }
 			every_playable_country = {
 				limit = {
 					has_communications = root
@@ -1119,7 +1119,7 @@ country_event = {
 			limit = {
 				last_increased_tech = tech_military_theory_breakthrough
 			}
-			end_event_chain = breakthrough_military_theory
+			if = { limit = { has_event_chain = breakthrough_military_theory } end_event_chain = breakthrough_military_theory }
 			every_playable_country = {
 				limit = {
 					has_communications = root

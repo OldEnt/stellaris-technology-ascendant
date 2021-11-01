@@ -4099,7 +4099,7 @@ tech_psionics_breakthrough = {
 		
 	modifier = {
 		all_technology_research_speed = 0.1
-		planet_jobs_specialist_unity_produces_add = 0.5
+		planet_jobs_specialist_unity_produces_add = 0.5 	# CWTools and error.log complain but it works?
 	}
 	prereqfor_desc = {
 		custom = {

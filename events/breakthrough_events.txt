@@ -4862,145 +4862,121 @@ country_event = {
     immediate = {
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_materials_breakthrough
                     OR = {
                         has_country_flag = "materials_breakthrough_spread_friendly"
 					    has_country_flag = "materials_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = materials_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_industry_breakthrough
                     OR = {
                         has_country_flag = "industry_breakthrough_spread_friendly"
 					    has_country_flag = "industry_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = industry_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_voidcraft_breakthrough
                     OR = {
                         has_country_flag = "voidcraft_breakthrough_spread_friendly"
 					    has_country_flag = "voidcraft_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = voidcraft_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_rocketry_breakthrough
                     OR = {
                         has_country_flag = "rocketry_breakthrough_spread_friendly"
 					    has_country_flag = "rocketry_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = rocketry_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_particles_breakthrough
                     OR = {
                         has_country_flag = "particles_breakthrough_spread_friendly"
 					    has_country_flag = "particles_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = particles_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_field_manipulation_breakthrough
                     OR = {
                         has_country_flag = "field_manipulation_breakthrough_spread_friendly"
 					    has_country_flag = "field_manipulation_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = field_manipulation_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_computing_breakthrough
                     OR = {
                         has_country_flag = "computing_breakthrough_spread_friendly"
 					    has_country_flag = "computing_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = computing_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_psionics_breakthrough
                     OR = {
                         has_country_flag = "psionics_breakthrough_spread_friendly"
 					    has_country_flag = "psionics_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = psionics_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_biology_breakthrough
                     OR = {
                         has_country_flag = "biology_breakthrough_spread_friendly"
 					    has_country_flag = "biology_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = biology_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_statecraft_breakthrough
                     OR = {
                         has_country_flag = "statecraft_breakthrough_spread_friendly"
 					    has_country_flag = "statecraft_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = statecraft_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_new_worlds_breakthrough
                     OR = {
                         has_country_flag = "new_worlds_breakthrough_spread_friendly"
-					    has_country_flag = "new_worldsbreakthrough_spread_hostile"
+					    has_country_flag = "new_worlds_breakthrough_spread_hostile"
                     }
-                }
             }
-            set_country_flag = new_worlds_theory_from_spread
+            set_country_flag = new_worlds_from_spread
         }
         if = {
             limit = {
-                AND = {
                     last_increased_tech = tech_military_theory_breakthrough
                     OR = {
                         has_country_flag = "military_theory_breakthrough_spread_friendly"
 					    has_country_flag = "military_theory_breakthrough_spread_hostile"
                     }
-                }
             }
             set_country_flag = military_theory_from_spread
         }
