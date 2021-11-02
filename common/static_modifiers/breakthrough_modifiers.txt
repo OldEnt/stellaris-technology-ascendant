@@ -13,6 +13,7 @@ Psychohistorians = {
   	planet_pop_assemblers_unity_produces_add = 0.5
    	planet_doctors_unity_produces_add = 0.5
    	planet_managers_unity_produces_add = 0.5
+	planet_bureaucrats_unity_produces_add = 0.5
 }
 
 Psychohistorian_crisis = {
