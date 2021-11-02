@@ -711,3 +711,16 @@ country_event = {
         change_variable = { which = repeatable_collateral_reduction value = 1 }
     }
 }
+
+country_event = {
+    id = repeatable.62
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        last_increased_tech = tech_repeatable_terraforming
+    }
+    immediate = {
+        change_variable = { which = repeatable_terraforming value = 1 }
+    }
+}

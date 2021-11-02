@@ -53,5 +53,6 @@ on_tech_increased = {
         repeatable.59
         repeatable.60
         repeatable.61
+        repeatable.62
     }
 }
